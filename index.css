@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #f0f0f0;
+  
+  }
+
+  
+.comic-page {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-container {
+    width: 80%;                       /* Ajusta el ancho del contenedor */
+    display: grid;
+    grid-template-columns: 40% 60%;   /* 40% para left, 60% para right */
+    gap: 30px;                        /* Espacio entre las cajas */
+}
+
+.square{
+    box-shadow: 10px 10px 0px 0px #0A0700;
+    border: 5px solid #0A0700;
+    background-color: #f0f0f0;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    background-image: url(bg-8.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.right h1{
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    letter-spacing: 3px;
+}
+.right h3{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: #f0f0f0;
+}
+.right p{
+    padding: 50px;
+    font-size: 25px;
+    color: #f0f0f0;
+}
+.social-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 3rem;
+}
+
+.social-icon{
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    background-position: center;
+    background-size: 100%;
+    width: 100%; /* Esto hará que cada icono ocupe todo el ancho disponible dentro de su celda */
+    height: 20vh;  
+    transition: background-size 0.3s ease-in-out;
+}
+
+.social-icon:hover{
+    background-size: 130%;
+    cursor: pointer;
+}
+
+.s1{
+    background-image: url(bg-7.png);
+}
+.s2{
+    background-image: url(bg-5.png);
+}
+.s3{
+    background-image: url(bg-1.png);
+}
+.s4{
+    background-image: url(bg-2.png);
+}
+.s5{
+    background-image: url(bg-4.png);
+}
+
+.social-container a{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.icon{
+    width: 90%;
+    height: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+.icon:hover{
+    transform: scale(0.8);
+}
+
+.games-container{
+    padding: 20px;
+    padding-left: 0;
+    margin-top: 40px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 40% 60%;   /* 40% para left, 60% para right */
+    gap: 30px;
+}
+
+.game{
+    cursor: pointer;
+}
+.games img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.game-1{
+    border-bottom: 5px solid #0A0700;
+    background-image: url(bellflower.png);
+    background-size: cover;
+    background-position: center;
+}
+.game-2{
+    border-bottom: 5px solid #0A0700;
+    background-image: url(dudeney.png);
+    background-size: cover;
+    background-position: center;
+}
+.game-3{
+    border-bottom: 5px solid #0A0700;
+    background-image: url(calesita.png);
+    background-size: cover;
+    background-position: center;
+}
+.game-4{
+    /* border: 5px solid #0A0700; */
+    background-image: url(steps.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.description{
+    top: 10px;
+    position: sticky;
+    width: 100%;
+    background-image: url(bg-5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.screenshots{
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.screenshots::-webkit-scrollbar{
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+  
+.screenshots::-webkit-scrollbar-thumb {
+    background-color: #821186;
+    border-radius: 10px;
+    border: 4px solid #f0f0f0;
+}
+  
+.screenshots::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(30, 194, 131);
+}
+
+.description h1{
+    color: #0A0700;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    letter-spacing: 5px;
+}
+
+.description p{
+    color: #0A0700;
+    width: 70%;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.description a{
+    color: #821186;
+    width: 100%;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-description{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description .screenshots{
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+
+.description .screenshots img{
+    width: 100%;
+}
+
+/* Animación para las etiquetas que aparecen desde el costado */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
